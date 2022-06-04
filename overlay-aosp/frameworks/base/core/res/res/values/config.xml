@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017-2021 The LineageOS Project
-     SPDX-License-Identifier: Apache-2.0
--->
+
 <resources>
     <!-- Default value for proximity check on screen wake
      NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
@@ -60,7 +56,7 @@
         <item>restart_bootloader</item>
         <item>restart_fastboot</item>
      </string-array>
-
+   
     <!-- Whether the device supports wireless charging or not -->
     <bool name="config_deviceSupportsWirelessCharging">true</bool>
 </resources>
