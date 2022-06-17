@@ -29,7 +29,7 @@ import org.nameless.device.OnePlusSettings.MainSettings;
 import org.nameless.device.OnePlusSettings.ModeSwitch;
 import org.nameless.device.OnePlusSettings.Utils.DozeUtils;
 import org.nameless.device.OnePlusSettings.Utils.SwitchUtils;
-import org.nameless.device.OnePlusSettings.Utils.VibrationUtils;
+/* import org.nameless.device.OnePlusSettings.Utils.VibrationUtils; */
 import org.nameless.device.OnePlusSettings.Utils.VolumeUtils;
 
 public class Startup extends BroadcastReceiver {
@@ -55,6 +55,6 @@ public class Startup extends BroadcastReceiver {
         if (enabled) context.startServiceAsUser(new Intent(context, FPSInfoService.class), UserHandle.CURRENT);
 
         DozeUtils.checkDozeService(context);
-        VibrationUtils.restoreVibStrengthSetting(context);
+/*        VibrationUtils.restoreVibStrengthSetting(context); */
     }
 }

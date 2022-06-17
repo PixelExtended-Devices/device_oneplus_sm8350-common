@@ -53,8 +53,8 @@ public class VibrationUtils {
     public static void restoreVibStrengthSetting(Context context) {
         if (FileUtils.isFileWritable(FILE_LEVEL)) {
             SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-            int value = sharedPrefs.getInt(MainSettings.KEY_VIBSTRENGTH, getVibStrength());
-            setVibStrength(context, value);
+/*            int value = sharedPrefs.getInt(MainSettings.KEY_VIBSTRENGTH, getVibStrength());
+            setVibStrength(context, value); */
         }
     }
 

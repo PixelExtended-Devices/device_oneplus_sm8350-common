@@ -40,13 +40,13 @@ import com.qualcomm.qcrilmsgtunnel.IQcrilMsgTunnel;
 import org.nameless.device.OnePlusSettings.Doze.DozeSettingsActivity;
 import org.nameless.device.OnePlusSettings.Preferences.CustomSeekBarPreference;
 import org.nameless.device.OnePlusSettings.Preferences.SwitchPreference;
-import org.nameless.device.OnePlusSettings.Preferences.VibratorStrengthPreference;
+/* import org.nameless.device.OnePlusSettings.Preferences.VibratorStrengthPreference; */
 import org.nameless.device.OnePlusSettings.Utils.FileUtils;
 import org.nameless.device.OnePlusSettings.Utils.FpsUtils;
 import org.nameless.device.OnePlusSettings.Utils.HBMUtils;
 import org.nameless.device.OnePlusSettings.Utils.Protocol;
 import org.nameless.device.OnePlusSettings.Utils.SwitchUtils;
-import org.nameless.device.OnePlusSettings.Utils.VibrationUtils;
+/* import org.nameless.device.OnePlusSettings.Utils.VibrationUtils; */
 import org.nameless.device.OnePlusSettings.Utils.VolumeUtils;
 
 public class MainSettings extends PreferenceFragment
@@ -58,7 +58,7 @@ public class MainSettings extends PreferenceFragment
     public static final String KEY_AUTO_HBM_THRESHOLD = "auto_hbm_threshold";
     public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_FPS_INFO = "fps_info";
-    public static final String KEY_VIBSTRENGTH = "vib_strength";
+/*    public static final String KEY_VIBSTRENGTH = "vib_strength"; */
 
     private static final String KEY_PREF_DOZE = "advanced_doze_settings";
     private static final String KEY_FPS_INFO_POSITION = "fps_info_position";
@@ -76,7 +76,7 @@ public class MainSettings extends PreferenceFragment
     private SwitchPreference mHBMModeSwitch;
     private SwitchPreference mFpsInfo;
     private CustomSeekBarPreference mFpsInfoTextSizePreference;
-    private VibratorStrengthPreference mVibratorStrengthPreference;
+/*    private VibratorStrengthPreference mVibratorStrengthPreference; */
 
     private ModeSwitch DCModeSwitch;
     private ModeSwitch HBMModeSwitch;
@@ -168,7 +168,7 @@ public class MainSettings extends PreferenceFragment
         mNrModeSwitcher = (ListPreference) findPreference(KEY_NR_MODE_SWITCHER);
         mNrModeSwitcher.setOnPreferenceChangeListener(this);
 
-        mVibratorStrengthPreference =  (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
+/*        mVibratorStrengthPreference =  (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (FileUtils.isFileWritable(VibrationUtils.FILE_LEVEL)) {
             mVibratorStrengthPreference.setValue(PreferenceManager.getDefaultSharedPreferences(context).
                     getInt(KEY_VIBSTRENGTH, VibrationUtils.getVibStrength()));
@@ -176,7 +176,7 @@ public class MainSettings extends PreferenceFragment
         } else {
             mVibratorStrengthPreference.setEnabled(false);
             mVibratorStrengthPreference.setSummary(getString(R.string.unsupported_feature));
-        }
+        } */
     }
 
     @Override
@@ -228,13 +228,13 @@ public class MainSettings extends PreferenceFragment
         } else if (preference == mNrModeSwitcher) {
             int mode = Integer.parseInt(newValue.toString());
             return setNrModeChecked(mode);
-        } else if (preference == mVibratorStrengthPreference) {
+        } /* else if (preference == mVibratorStrengthPreference) {
             int value = Integer.parseInt(newValue.toString());
             PreferenceManager.getDefaultSharedPreferences(context).edit().
                     putInt(KEY_VIBSTRENGTH, value).commit();
             VibrationUtils.setVibStrength(context, value);
             VibrationUtils.doHapticFeedback(context, VibrationEffect.EFFECT_CLICK, true);
-        }
+        } */
         return true;
     }
 
