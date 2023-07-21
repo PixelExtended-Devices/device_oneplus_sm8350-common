@@ -11,4 +11,8 @@
     <!-- Dolby Atmos -->
     <string name="config_dolbyAtmosPackage" translatable="false">com.dolby.daxappui/com.dolby.daxappui.MainActivity</string>
 
+    <!-- PEX Maintainer -->
+    <string name="pex_maintainer_name" translatable="false">Mrick343</string>
+    <string name="pex_maintainer_group" translatable="false">https://t.me/Mrick343</string>
+
 </resources>
